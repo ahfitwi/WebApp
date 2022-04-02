@@ -3,7 +3,7 @@
 
 #            -------------------- FSWA = |FE | BE | DB|---------------------------
 #### Compiled by Alem Fitwi, Created on Wed Jun 24 18:37:49 2020
-##### A FSWDeveloper is one who is often responsible for the E2E development of a fullblown product--web-app. He is supposed to have the following skillsets, listed 1 through 7.
+##### A FSWDeveloper is one who is often responsible for the E2E development of a fullblown product or a web-app. He is supposed to have the following skillsets, listed 1 through 7.
 ## 1. Front End (FE) Technologies
    ###### FE is a website where customers directly interact with. It displays data/response in a nice or user-friendly manner.
    ###### FE Stores no data/response; it only displays the data fetched from DB by means of BE in a nice way.
