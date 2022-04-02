@@ -45,9 +45,13 @@
 ##### 5.3 TFS: Team Foundation version Control System (Git and TFS) is a version control tool 
 
 ## 6. Mobile App Devt Frameworks: Swiftic, Native Scripts, AndroidStudio, React Native, Xamarin, Ionic, Sencha Ext JS, OpenSI, Flutter, Corona, and JQuery Mobile 
-## 7. DevOps and Agile Methodology
-##### 7.1 DevOps:
-##### 7.2 Agile Methodology: 
+## 7. DevOps and Agile Methodology.
+##### 7.1 DevOps: Devt and operation skills are vital. Dev > Ops > Dev > Ops ...; 
+##### Dev = Plan > Code > Build > Test and 
+##### Ops = Release > Deploy > Operate > Monitor > Dev ...
+##### 7.2 Agile Methodology: Break an app into several deliverable pieces, and maintain communication between the devt team and customer throughout. 
+##### Agile:=> Define > Build > Release > Repeat ...
+
 # ------------------------------------------------------
 # Fullstack Web-APP (FSWA) Dvt ==> Skillsets Required
 # ------------------------------------------------------
