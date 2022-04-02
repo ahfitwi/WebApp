@@ -166,24 +166,25 @@ $  pip install flask
       </html>
       
 ### 6.
-$ pip freeze
-certifi==2021.10.8
-charset-normalizer==2.0.12
-click==8.0.4
-Flask==2.0.3
-Flask-Cors==3.0.10
-idna==3.3
-importlib-metadata==4.11.3
-itsdangerous==2.1.2
-Jinja2==3.1.1
-MarkupSafe==2.1.1
-numpy==1.21.5
-requests==2.27.1
-six==1.16.0
-typing_extensions==4.1.1
-urllib3==1.26.9
-Werkzeug==2.0.3
-zipp==3.7.0
+(sn) (base) alem@alem-Legion-S7-15ACH6:~/Documents/projects/sn$ pip freeze
+
+   certifi==2021.10.8
+   charset-normalizer==2.0.12
+   click==8.0.4
+   Flask==2.0.3
+   Flask-Cors==3.0.10
+   idna==3.3
+   importlib-metadata==4.11.3
+   itsdangerous==2.1.2
+   Jinja2==3.1.1
+   MarkupSafe==2.1.1
+   numpy==1.21.5
+   requests==2.27.1
+   six==1.16.0
+   typing_extensions==4.1.1
+   urllib3==1.26.9
+   Werkzeug==2.0.3
+   zipp==3.7.0
 
    
 
