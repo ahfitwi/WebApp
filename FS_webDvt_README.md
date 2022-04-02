@@ -20,7 +20,7 @@
 ###### It serves as a secure communication interface/means between the FE and DB 
 ###### Majorly exists for security reasons; it has other vital purposes, though.
 ###### Popular BE Technolgies include:
-###### 2.1 Python Stack (Django, Flask, Cherry py, & =Pyramid) with python
+###### 2.1 Python Stack (Django, Flask, Cherry py, & Pyramid) with python
 ###### 2.2 Microsoft.NET Stack(asp.net MVC, asp.net WEB API, .net core Web API, & WCF) with C#/VB/F#
 ###### 2.3 .NET Java Stack (Spring Boot, Spring MVC, and Spring REST) with Java
 ###### 2.4 PHP, still widely used for website development. It accounts more 35% of current web-devts
@@ -32,7 +32,7 @@
 ###### The place where data/actual details about sth are stored systematically and securely.
 ###### All user data are stored here securely, where the public features/data are accessed by customers by means of the BE.
 ###### One should be good at:
-###### 3.1 SQL Databases (SQLite, MySWL, Maria DB, SQL Server, Oracle SQL, ...)
+###### 3.1 SQL Databases (SQLite, MySQL, Maria DB, MS SQL Server, Oracle SQL, ...)
 ###### Used to organize and store structured data; data organized in the form of Records and Fields.
 ###### 3.2 NoSQL Databases (mongoDB, neo4j, cassandra, HBASE, ...)
 ###### NoSQL stores unstructured data; data not organized in the form of rows-columns, obeservations-variables, or records-fields. Image, social-meida data, text data, etc, are typical examples
@@ -67,11 +67,124 @@
 
 
 # ------------------------------------------------------
-# Common Components of a WebApp (FS Python Flask)
+# Typical Components of a WebApp (FS Python Flask)
 # ------------------------------------------------------
-### 1. app.py: router/route
-      import 
-### 2. template/index.htmp: flask always look for a template folder for html rendering
-### 3. models.py: a thin layer or middleware that interfaces the app with the database through ORM tools
-### 4. datbase.db
-### 5. schema.sql
+FE/Client --> BE/Server --> DB
+
+### 1. schema.sql
+$ nano schema.sql
+
+drop table if exists alemtbl;
+         create table alemtbl(
+                id integer primary key autoincrement,
+                name text not null,
+                address text not null,
+);
+
+### 2. datbase.db
+$ sqlite3 database.db < schema.sql
+
+### 3. app.py: a BE/Server App
+#### Router/route or an intermediary program
+#### It is a good practice to name it as app.py
+$  pip install flask
+      
+      from flask import Flask, render_template, request
+      from flask_cors import CORS
+      
+      CORS(app) #security precautions, prevents crosssite scripting, injection, ...
+      
+      app = Flask(__name__) # actual server
+      
+      #'/' homepage
+      @app.route('/', methods =['GET', 'POST', 'DELETE', ...) # a kind of callback
+      #router, @app.route('/home'), @app.route('/login') ...
+      
+      def index():
+         if request.method == 'GET':
+            pass
+         if request.methods == 'POST':
+            name = request.form.get('name')
+            address = request.form.get('address')
+            create_post(name, address)
+            ...
+         posts = get_posts()
+         return render_template("index.html", posts = posts)
+         
+            
+   if __name__ == '__main__':
+      add.run(debug=True
+      
+### 4. models.py: 
+###### A thin layer or middleware that interfaces the FE with the database through ORM tools
+###### It allows us to access the db.
+
+   import sqlite3
+   
+   root = path.dirname(path.relpath((__file__))
+   
+   def create_post(name, address):
+      con = sql.connect(path.join(root, 'database.db')
+      cur = con.cursor()
+      cur.execute("insert into alemtbl (name, address) values(?,?)", (name, address))
+      con.commit()
+      con.close()
+   
+   def get_posts():
+      con = sql.connect(path.join(root, 'database.db')
+      cur = con.cursor()
+      cur.execute("select * alemtbl")
+      posts = cur.fetchall()
+      return posts 
+   
+### 5. template/index.html: 
+##### Flask always look for a template folder for html rendering file named index.html
+
+      <!DOCTYPE html>
+      <html>
+         <!---******************************************************************-->
+         <!--- Template/index.html-->
+         <!---******************************************************************-->
+         <!---Created on Fri Wed Jun 24 17:45:14 2020 @author: alem fitwi --->
+         <!---******************************************************************-->
+
+         <body>
+               <form action = '/' method = 'post'>
+                     <inour placeholder = 'Name' name = 'name'>
+                     <inour placeholder = 'Address' address = 'address'>
+                     <inour type = 'submit', value = 'Submit'>
+               </form>
+               
+               <!--- Below: Rendering Template, {{python}} --->
+               {% for attrib in posts%}
+               <div {{attrib[1] + ':' attrib[2] }}></div>
+               {%endfor%}
+       
+
+         </body>
+
+      </html>
+      
+### 6.
+$ pip freeze
+certifi==2021.10.8
+charset-normalizer==2.0.12
+click==8.0.4
+Flask==2.0.3
+Flask-Cors==3.0.10
+idna==3.3
+importlib-metadata==4.11.3
+itsdangerous==2.1.2
+Jinja2==3.1.1
+MarkupSafe==2.1.1
+numpy==1.21.5
+requests==2.27.1
+six==1.16.0
+typing_extensions==4.1.1
+urllib3==1.26.9
+Werkzeug==2.0.3
+zipp==3.7.0
+
+   
+
+                
