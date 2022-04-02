@@ -1,5 +1,5 @@
 
-# Fullstack Web-APP (FSWA) Dvt $\rightarrow$ Skillsets Required
+# Fullstack Web-APP (FSWA) Dvt --> Skillsets Required
 
 #            -------------------- FSWA = |FE | BE | DB|---------------------------
 #### Compiled by Alem Fitwi, Created on Wed Jun 24 18:37:49 2020
