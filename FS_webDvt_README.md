@@ -87,7 +87,8 @@ $ sqlite3 database.db < schema.sql
 ### 3. app.py: a BE/Server App
 #### Router/route or an intermediary program
 #### It is a good practice to name it as app.py
-$  pip install flask
+##### $  pip install flask
+##### $  pip install flask_cors
       
       from flask import Flask, render_template, request
       from flask_cors import CORS
@@ -112,30 +113,30 @@ $  pip install flask
          return render_template("index.html", posts = posts)
          
             
-   if __name__ == '__main__':
-      add.run(debug=True
+      if __name__ == '__main__':
+         add.run(debug=True
       
 ### 4. models.py: 
 ###### A thin layer or middleware that interfaces the FE with the database through ORM tools
 ###### It allows us to access the db.
 
-   import sqlite3
+      import sqlite3
    
-   root = path.dirname(path.relpath((__file__))
+      root = path.dirname(path.relpath((__file__))
    
-   def create_post(name, address):
-      con = sql.connect(path.join(root, 'database.db')
-      cur = con.cursor()
-      cur.execute("insert into alemtbl (name, address) values(?,?)", (name, address))
-      con.commit()
-      con.close()
+      def create_post(name, address):
+         con = sql.connect(path.join(root, 'database.db')
+         cur = con.cursor()
+         cur.execute("insert into alemtbl (name, address) values(?,?)", (name, address))
+         con.commit()
+         con.close()
    
-   def get_posts():
-      con = sql.connect(path.join(root, 'database.db')
-      cur = con.cursor()
-      cur.execute("select * alemtbl")
-      posts = cur.fetchall()
-      return posts 
+      def get_posts():
+         con = sql.connect(path.join(root, 'database.db')
+         cur = con.cursor()
+         cur.execute("select * alemtbl")
+         posts = cur.fetchall()
+         return posts 
    
 ### 5. template/index.html: 
 ##### Flask always look for a template folder for html rendering file named index.html
@@ -168,24 +169,22 @@ $  pip install flask
 ### 6.
 (sn) (base) alem@alem-Legion-S7-15ACH6:~/Documents/projects/sn$ pip freeze
 
-   certifi==2021.10.8
-   charset-normalizer==2.0.12
-   click==8.0.4
-   Flask==2.0.3
-   Flask-Cors==3.0.10
-   idna==3.3
-   importlib-metadata==4.11.3
-   itsdangerous==2.1.2
-   Jinja2==3.1.1
-   MarkupSafe==2.1.1
-   numpy==1.21.5
-   requests==2.27.1
-   six==1.16.0
-   typing_extensions==4.1.1
-   urllib3==1.26.9
-   Werkzeug==2.0.3
-   zipp==3.7.0
-
-   
-
-                
+      certifi==2021.10.8
+      charset-normalizer==2.0.12
+      click==8.0.4
+      Flask==2.0.3
+      Flask-Cors==3.0.10
+      idna==3.3
+      importlib-metadata==4.11.3
+      itsdangerous==2.1.2
+      Jinja2==3.1.1
+      MarkupSafe==2.1.1
+      numpy==1.21.5
+      requests==2.27.1
+      six==1.16.0
+      typing_extensions==4.1.1
+      urllib3==1.26.9
+      Werkzeug==2.0.3
+      zipp==3.7.0
+      
+      ----------------~END~---------------------
