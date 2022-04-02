@@ -67,5 +67,11 @@
 
 
 # ------------------------------------------------------
-# Common Components of a WebApp
+# Common Components of a WebApp (FS Python Flask)
 # ------------------------------------------------------
+### 1. app.py: router/route
+      import 
+### 2. template/index.htmp: flask always look for a template folder for html rendering
+### 3. models.py: a thin layer or middleware that interfaces the app with the database through ORM tools
+### 4. datbase.db
+### 5. schema.sql
