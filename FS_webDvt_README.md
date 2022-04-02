@@ -1,5 +1,5 @@
 # Fullstack Web-APP (FSWA) Dvt ==> Skillsets Required
-# ------------------------------------------------------
+# ---------------------------------------------------------------------------------------
 #            FSWA = |FE | BE | DB|
 #### Compiled by Alem Fitwi, Created on Wed Jun 24 18:37:49 2020
 ## A FSWDeveloper is one who is often responsible for the E2E development of a fullblown product--web-app. He is supposed to have the following skillsets, listed 1 through 7.
@@ -36,15 +36,19 @@
 ##### 3.2 NoSQL Databases (mongoDB, neo4j, cassandra, HBASE, ...)
 ##### NoSQL stores unstructured data; data not organized in the form of rows-columns, obeservations-variables, or records-fields. Image, social-meida data, text data, etc, are typical examples
 ##### 3.3 Debugging and writting SQL Queries and subqueries, stored procedures, and SQL Functions.
+
 ## 4. Object Relational Mapping (ORM) Tools: JungleORM/SQLAlchemy (Python), Entity Framework (C# & .NET), and Hibernate (Java) 
+
 ##### Enables you to interact with the DB Technology in use using a BE programming lamguage of your choice.
 
 ## 5. Source/Version Control Software: helps keep track of all the changes made to the app under devt by different authorized developers. Besides, it helps create auspicious environment for collaboration with different developers from different organizations or places. Good for collaborative devt of apps. 
+
 ##### 5.1 Git along with Github (Github, Enterprise Github, ...)
 ##### 5.2 CVS: CVS is (old) centralized version control system, while Git is distributed.
 ##### 5.3 TFS: Team Foundation version Control System (Git and TFS) is a version control tool 
 
 ## 6. Mobile App Devt Frameworks: Swiftic, Native Scripts, AndroidStudio, React Native, Xamarin, Ionic, Sencha Ext JS, OpenSI, Flutter, Corona, and JQuery Mobile 
+
 ## 7. DevOps and Agile Methodology.
 ##### 7.1 DevOps: Devt and operation skills are vital. Dev > Ops > Dev > Ops ...; 
 ##### Dev = Plan > Code > Build > Test and 
@@ -52,6 +56,8 @@
 ##### 7.2 Agile Methodology: Break an app into several deliverable pieces, and maintain communication between the devt team and customer throughout. 
 ##### Agile:=> Define > Build > Release > Repeat ...
 
+## 8. Development Server vs Production Server
+
 # ------------------------------------------------------
-# Fullstack Web-APP (FSWA) Dvt ==> Skillsets Required
+# Common Components of a WebApp
 # ------------------------------------------------------
