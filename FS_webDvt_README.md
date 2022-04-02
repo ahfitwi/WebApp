@@ -1,6 +1,6 @@
-#### -----------------------------------------------------------------------------------
-# Fullstack Web-APP (FSWA) Dvt ==> Skillsets Required
-#### -----------------------------------------------------------------------------------
+
+# Fullstack Web-APP (FSWA) Dvt $\rightarrow$ Skillsets Required
+
 #            -------------------- FSWA = |FE | BE | DB|---------------------------
 #### Compiled by Alem Fitwi, Created on Wed Jun 24 18:37:49 2020
 ##### A FSWDeveloper is one who is often responsible for the E2E development of a fullblown product--web-app. He is supposed to have the following skillsets, listed 1 through 7.
