@@ -1,2 +1,10 @@
 # Fullstack Web-Dvt ==> Skillsets Required
-## 1. Front End Technologies
+#### Compiled by Alem Fitwi
+## 1. Front End (FE) Technologies
+   #### FE is a website where customers directly interact with. It displays data/response in a nice or user-friendly manner. 
+   #### Skills Required:
+                        #### 1.1 FE/Website Developemnt Technolgies: HTML, CSS, & JS
+                        #### 1.2 FE Dev't Framework: Angular, React, View, etc: Be well familiar at least with one of them.
+                        #### 1.3 Bootstrape:makes front-end web development faster and easier. It is the world's most popular front-end open source toolkit made for folks of all skill levels, devices of all shapes, and projects of all sizes. 
+                        #### 1.4 Jquery:
+                        
