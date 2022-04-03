@@ -194,5 +194,24 @@ $ sqlite3 database.db < schema.sql
       urllib3==1.26.9
       Werkzeug==2.0.3
       zipp==3.7.0
+  
+  
+# ------------------------------------------------------
+# Sample Project: React-FE-UI + Flask-BE + DB
+# ------------------------------------------------------
+### Project Structure
+
+      projReactFlask/
+      |-- api
+          |-- config.py
+          |-- __init__.py
+          |-- models.py
+          |-- routes.py
+      |-- |-- app.py
+      |-- |-- Dockerfile
+      |-- |-- README.md
+      |-- |-- requirements.txt
+      |-- |-- sampleTest.py
+
       
       ----------------~END~---------------------
