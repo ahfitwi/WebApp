@@ -214,5 +214,8 @@ $ pip install -r requirements.txt
       |-- |-- requirements.txt
       |-- |-- sampleTest.py
 
-      
+### On Linux OS
+
+      mkdir [folder_name] 
+      touch [filename, .py, .md, .txt]
       ----------------~END~---------------------
