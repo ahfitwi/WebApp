@@ -90,12 +90,19 @@ $ sqlite3 database.db < schema.sql
 ##### $  pip install flask
 ##### $  pip install flask_cors
       
-      from flask import Flask, render_template, request
+      import os
+      import sys
+      import random
+      from flask import Flask
+      from flask import render_template, request, jsonify, redirect, url_for, send_file, Response, make_response
+      from werkzeug import secure_filename
       from flask_cors import CORS
       
-      CORS(app) #security precautions, prevents crosssite scripting, injection, ...
+      from models import create_post, get_posts
       
       app = Flask(__name__) # actual server
+      
+      CORS(app) #security precautions, prevents crosssite scripting, injection, ...
       
       #'/' homepage
       @app.route('/', methods =['GET', 'POST', 'DELETE', ...) # a kind of callback
@@ -104,11 +111,11 @@ $ sqlite3 database.db < schema.sql
       def index():
          if request.method == 'GET':
             pass
-         if request.methods == 'POST':
+            
+         if request.method == 'POST':
             name = request.form.get('name')
             address = request.form.get('address')
             create_post(name, address)
-            ...
          posts = get_posts()
          return render_template("index.html", posts = posts)
          
@@ -120,21 +127,22 @@ $ sqlite3 database.db < schema.sql
 ###### A thin layer or middleware that interfaces the FE with the database through ORM tools
 ###### It allows us to access the db.
 
-      import sqlite3
+      import sqlite3 as sql
+      from os import path
    
       root = path.dirname(path.relpath((__file__))
    
       def create_post(name, address):
          con = sql.connect(path.join(root, 'database.db')
          cur = con.cursor()
-         cur.execute("insert into alemtbl (name, address) values(?,?)", (name, address))
+         cur.execute('insert into alemtbl (name, address) values(?,?)', (name, address))
          con.commit()
          con.close()
    
       def get_posts():
-         con = sql.connect(path.join(root, 'database.db')
+         con = sql.connect(path.join(root, 'database.db'))
          cur = con.cursor()
-         cur.execute("select * alemtbl")
+         cur.execute("select * from alemtbl")
          posts = cur.fetchall()
          return posts 
    
@@ -151,14 +159,14 @@ $ sqlite3 database.db < schema.sql
 
          <body>
                <form action = '/' method = 'post'>
-                     <inour placeholder = 'Name' name = 'name'>
-                     <inour placeholder = 'Address' address = 'address'>
-                     <inour type = 'submit', value = 'Submit'>
+                     <input placeholder = 'Name' name = 'name'>
+                     <input placeholder = 'Address' name = 'address'>
+                     <input type = 'submit', value = 'Submit'>
                </form>
                
                <!--- Below: Rendering Template, {{python}} --->
                {% for attrib in posts%}
-               <div {{attrib[1] + ':' attrib[2] }}></div>
+               <div> {{attrib[1] + ': ' + attrib[2] }}</div>
                {%endfor%}
        
 
@@ -166,7 +174,7 @@ $ sqlite3 database.db < schema.sql
 
       </html>
       
-### 6.
+### 6. requirements.txt (Added on Apr 02, 2022)
 (sn) (base) alem@alem-Legion-S7-15ACH6:~/Documents/projects/sn$ pip freeze
 
       certifi==2021.10.8
