@@ -196,7 +196,9 @@ $ sqlite3 database.db < schema.sql
       zipp==3.7.0
       
 $ pip install -r requirements.txt
-  
+
+# ------------------------------------------------------
+# Sample Project: React-FE-UI + Flask-BE + DB
 # ------------------------------------------------------
 ### Project Structure
 
