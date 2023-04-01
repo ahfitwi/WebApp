@@ -14,7 +14,7 @@
 - Delete Data
 - Delete Data
 - Update Model
--
+
 ### 2. Display
 - Prepare
 - Add Details
